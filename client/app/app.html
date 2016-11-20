@@ -1,0 +1,33 @@
+<div layout="column" layout-padding >
+    <style>
+        .title{
+            font-size: 21pt;
+        }
+        #content{
+            position: relative;
+        }
+        #content md-content.ng-enter{
+            animation: fadeInLeft 500ms;
+        }
+        #content md-content.ng-leave{
+            z-index: 2;
+            position: absolute;
+            animation: fadeOutRight 500ms;
+        }
+    </style>
+    <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links" flex>
+        <span class=title flex> {{title}} </span>
+        <md-nav-item ng-repeat="(key, val) in nav" md-nav-click="goto(key)" name="{{key}}">{{val.text}}</md-nav-item>
+    </md-nav-bar>
+    <md-content id=content flex layout="column">
+        <md-content flex layout="row" layout-padding ng-if="currentNavItem == 'home'">
+            Home content goes here...
+        </md-content>
+        <md-content flex layout="row" layout-padding ng-if="currentNavItem == 'goodStuff'">
+            Good stuff content goes here...
+        </md-content>
+        <md-content flex layout="row" layout-padding ng-if="currentNavItem == 'contact'">
+            Contact content goes here...
+        </md-content>
+    </md-content>
+</div>

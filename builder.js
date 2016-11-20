@@ -47,7 +47,7 @@ spinner.setSpinnerString(1);
 spinner.start();
 
 builder
-.bundle('./client/app/boot.js', './client/app/bundle.js', { minify: true })
+.bundle('./client/boot.js', './client/bundle.js', { minify: true })
 .then(function() {
     spinner.stop(true);
     console.log(`Build completed (in ${timer.toSeconds()} seconds)`);

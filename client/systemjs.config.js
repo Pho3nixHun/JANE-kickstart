@@ -30,6 +30,7 @@ System.config({
     "css": "github:systemjs/plugin-css@0.1.32",
     "jquery": "npm:jquery@3.1.1",
     "json": "github:systemjs/plugin-json@0.2.1",
+    "text": "github:systemjs/plugin-text@0.0.9",
     "github:angular/bower-angular-animate@1.5.8": {
       "angular": "github:angular/bower-angular@1.5.8"
     },
