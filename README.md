@@ -27,4 +27,11 @@ Included libraries:
 + Animate.css
 + Material-icons font set
 
+### Install
+
+```
+    npm install && jspm install
+    npm run build-client (Optional)
+```
+
 Systemjs-builder also implemented. See ```builder.js```.
